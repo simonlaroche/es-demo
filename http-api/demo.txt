@@ -1,0 +1,23 @@
+
+//Expect that the stream does not exists if stream exist returns a 400 error
+curl -i -d @new-event.json "http://127.0.0.1:2113/streams/chat-ExistingChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: -1" -x 127.0.0.1:8888
+
+curl -i -d @new-event.json "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: -1"  -x 127.0.0.1:8888
+
+//If I repost with same event id, I still get a created.
+curl -i -d @new-event-same-id.json "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: -1"  -x 127.0.0.1:8888
+
+//Append or create stream
+curl -i -d @new-event-2.json "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: -2"  -x 127.0.0.1:8888
+
+//Exprect the stream to be at version 3, 400 otherwise
+curl -i -d @new-event-3.json "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: 3"  -x 127.0.0.1:8888
+
+curl -i -d @new-event-3.json "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Content-Type:application/json" -H "ES-ExpectedVersion: 1"  -x 127.0.0.1:8888
+
+//Reading is also  very simple
+
+curl -i "http://127.0.0.1:2113/streams/chat-NewChatRoom" -H "Accept:application/vnd.eventstore.atom+json"  -x 127.0.0.1:8888
+
+curl -i "http://127.0.0.1:2113/streams/chat-NewChatRoom/1" -H "Accept:application/vnd.eventstore.atom+json"  -x 127.0.0.1:8888 
+

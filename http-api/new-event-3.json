@@ -1,0 +1,11 @@
+[
+  {
+    "EventId": "2f9fad5b-d9cb-469f-a165-7a869728951e",
+    "EventType": "ChatMessage",
+    "Data": {
+      "sender": "John Smith",
+      "message": "Really?",
+      "time": "00:47:51"
+    }
+  }
+]

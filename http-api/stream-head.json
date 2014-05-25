@@ -1,0 +1,82 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, no-cache, must-revalidate
+Content-Length: 1908
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+ETag: "1;-2060438500"
+Vary: Accept
+Server: Microsoft-HTTPAPI/2.0
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location
+Date: Thu, 22 May 2014 23:35:55 GMT
+
+{
+  "title": "Event stream 'chat-NewChatRoom'",
+  "id": "http://127.0.0.1:2113/streams/chat-NewChatRoom",
+  "updated": "2014-05-22T23:09:44.2798398Z",
+  "streamId": "chat-NewChatRoom",
+  "author": {
+    "name": "EventStore"
+  },
+  "headOfStream": true,
+  "selfUrl": "http://127.0.0.1:2113/streams/chat-NewChatRoom",
+  "links": [
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom",
+      "relation": "self"
+    },
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/head/backward/20",
+      "relation": "first"
+    },
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/2/forward/20",
+      "relation": "previous"
+    },
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/metadata",
+      "relation": "metadata"
+    }
+  ],
+  "entries": [
+    {
+      "title": "1@chat-NewChatRoom",
+      "id": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+      "updated": "2014-05-22T23:09:44.2798398Z",
+      "author": {
+        "name": "EventStore"
+      },
+      "summary": "ChatMessage",
+      "links": [
+        {
+          "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+          "relation": "edit"
+        },
+        {
+          "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+          "relation": "alternate"
+        }
+      ]
+    },
+    {
+      "title": "0@chat-NewChatRoom",
+      "id": "http://127.0.0.1:2113/streams/chat-NewChatRoom/0",
+      "updated": "2014-05-22T23:09:31.3999477Z",
+      "author": {
+        "name": "EventStore"
+      },
+      "summary": "ChatMessage",
+      "links": [
+        {
+          "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/0",
+          "relation": "edit"
+        },
+        {
+          "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/0",
+          "relation": "alternate"
+        }
+      ]
+    }
+  ]
+}

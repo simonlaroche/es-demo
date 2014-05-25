@@ -1,0 +1,42 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=31536000, public
+Content-Length: 715
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Vary: Accept
+Server: Microsoft-HTTPAPI/2.0
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location
+Date: Thu, 22 May 2014 23:40:01 GMT
+
+{
+  "title": "1@chat-NewChatRoom",
+  "id": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+  "updated": "2014-05-22T23:09:44.2798398Z",
+  "author": {
+    "name": "EventStore"
+  },
+  "summary": "ChatMessage",
+  "content": {
+    "eventStreamId": "chat-NewChatRoom",
+    "eventNumber": 1,
+    "eventType": "ChatMessage",
+    "data": {
+      "sender": "John Smith",
+      "message": "Hello from John",
+      "time": "00:47:44"
+    },
+    "metadata": ""
+  },
+  "links": [
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+      "relation": "edit"
+    },
+    {
+      "uri": "http://127.0.0.1:2113/streams/chat-NewChatRoom/1",
+      "relation": "alternate"
+    }
+  ]
+}
