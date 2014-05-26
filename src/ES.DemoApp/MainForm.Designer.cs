@@ -37,11 +37,11 @@
             this.activitiesLable = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.readAsLabel = new System.Windows.Forms.Label();
-            this.readAs = new System.Windows.Forms.TextBox();
-            this.events = new System.Windows.Forms.TextBox();
-            this.startReading = new System.Windows.Forms.Button();
             this.stopreading = new System.Windows.Forms.Button();
+            this.startReading = new System.Windows.Forms.Button();
+            this.events = new System.Windows.Forms.TextBox();
+            this.readAs = new System.Windows.Forms.TextBox();
+            this.readAsLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.postAs.Name = "postAs";
             this.postAs.Size = new System.Drawing.Size(382, 20);
             this.postAs.TabIndex = 1;
-            this.postAs.Text = "@johndoe,@janedoe,@jimmybean,@johnnywalker,@jackdaniel";
+            this.postAs.Text = "johndoe,janedoe,jimmybean,johnnywalker,jackdaniel";
             // 
             // postAsLabel
             // 
@@ -140,30 +140,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Read Posts";
             // 
-            // readAsLabel
+            // stopreading
             // 
-            this.readAsLabel.AutoSize = true;
-            this.readAsLabel.Location = new System.Drawing.Point(22, 19);
-            this.readAsLabel.Name = "readAsLabel";
-            this.readAsLabel.Size = new System.Drawing.Size(48, 13);
-            this.readAsLabel.TabIndex = 0;
-            this.readAsLabel.Text = "Read As";
-            // 
-            // readAs
-            // 
-            this.readAs.Location = new System.Drawing.Point(76, 19);
-            this.readAs.Name = "readAs";
-            this.readAs.Size = new System.Drawing.Size(475, 20);
-            this.readAs.TabIndex = 1;
-            this.readAs.Text = "@johndoe";
-            // 
-            // events
-            // 
-            this.events.Location = new System.Drawing.Point(25, 73);
-            this.events.Multiline = true;
-            this.events.Name = "events";
-            this.events.Size = new System.Drawing.Size(526, 294);
-            this.events.TabIndex = 2;
+            this.stopreading.Location = new System.Drawing.Point(413, 45);
+            this.stopreading.Name = "stopreading";
+            this.stopreading.Size = new System.Drawing.Size(138, 23);
+            this.stopreading.TabIndex = 4;
+            this.stopreading.Text = "Stop Reading";
+            this.stopreading.UseVisualStyleBackColor = true;
+            this.stopreading.Click += new System.EventHandler(this.stopreading_Click);
             // 
             // startReading
             // 
@@ -175,15 +160,30 @@
             this.startReading.UseVisualStyleBackColor = true;
             this.startReading.Click += new System.EventHandler(this.startReading_Click);
             // 
-            // stopreading
+            // events
             // 
-            this.stopreading.Location = new System.Drawing.Point(413, 45);
-            this.stopreading.Name = "stopreading";
-            this.stopreading.Size = new System.Drawing.Size(138, 23);
-            this.stopreading.TabIndex = 4;
-            this.stopreading.Text = "Stop Reading";
-            this.stopreading.UseVisualStyleBackColor = true;
-            this.stopreading.Click += new System.EventHandler(this.stopreading_Click);
+            this.events.Location = new System.Drawing.Point(25, 73);
+            this.events.Multiline = true;
+            this.events.Name = "events";
+            this.events.Size = new System.Drawing.Size(526, 294);
+            this.events.TabIndex = 2;
+            // 
+            // readAs
+            // 
+            this.readAs.Location = new System.Drawing.Point(76, 19);
+            this.readAs.Name = "readAs";
+            this.readAs.Size = new System.Drawing.Size(475, 20);
+            this.readAs.TabIndex = 1;
+            this.readAs.Text = "johndoe";
+            // 
+            // readAsLabel
+            // 
+            this.readAsLabel.AutoSize = true;
+            this.readAsLabel.Location = new System.Drawing.Point(22, 19);
+            this.readAsLabel.Name = "readAsLabel";
+            this.readAsLabel.Size = new System.Drawing.Size(48, 13);
+            this.readAsLabel.TabIndex = 0;
+            this.readAsLabel.Text = "Read As";
             // 
             // MainForm
             // 

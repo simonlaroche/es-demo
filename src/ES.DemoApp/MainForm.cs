@@ -44,6 +44,14 @@ namespace ES.DemoApp
             Task.Factory.StartNew(() => PostActivities(token)); 
         }
 
+        private void Repartition()
+        {
+            var pm = new EventStore.ClientAPI.ProjectionsManager(
+                null,
+                new IPEndPoint(new IPAddress(new byte[] { 127, 0, 0, 1 }), 2113));
+        
+           // pm.CreateContinuous("partition-by-user");
+        }
 
         private void PostActivities(CancellationToken token)
         {
