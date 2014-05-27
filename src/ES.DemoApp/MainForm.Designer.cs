@@ -32,7 +32,6 @@
             this.stopPostingActivitiesButton = new System.Windows.Forms.Button();
             this.postAs = new System.Windows.Forms.TextBox();
             this.postAsLabel = new System.Windows.Forms.Label();
-            this.mentionsEnabled = new System.Windows.Forms.CheckBox();
             this.activities = new System.Windows.Forms.TextBox();
             this.activitiesLable = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,8 +41,16 @@
             this.events = new System.Windows.Forms.TextBox();
             this.readAs = new System.Windows.Forms.TextBox();
             this.readAsLabel = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.everythingEvents = new System.Windows.Forms.TextBox();
+            this.repartitionByUser = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.emitWhenConditionDetected = new System.Windows.Forms.Button();
+            this.heavyPosters = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // postActivitiesButton
@@ -83,16 +90,6 @@
             this.postAsLabel.TabIndex = 0;
             this.postAsLabel.Text = "Post As";
             // 
-            // mentionsEnabled
-            // 
-            this.mentionsEnabled.AutoSize = true;
-            this.mentionsEnabled.Location = new System.Drawing.Point(15, 73);
-            this.mentionsEnabled.Name = "mentionsEnabled";
-            this.mentionsEnabled.Size = new System.Drawing.Size(111, 17);
-            this.mentionsEnabled.TabIndex = 4;
-            this.mentionsEnabled.Text = "Mentions Enabled";
-            this.mentionsEnabled.UseVisualStyleBackColor = true;
-            // 
             // activities
             // 
             this.activities.Location = new System.Drawing.Point(92, 47);
@@ -116,7 +113,6 @@
             this.groupBox1.Controls.Add(this.postAs);
             this.groupBox1.Controls.Add(this.activities);
             this.groupBox1.Controls.Add(this.postActivitiesButton);
-            this.groupBox1.Controls.Add(this.mentionsEnabled);
             this.groupBox1.Controls.Add(this.stopPostingActivitiesButton);
             this.groupBox1.Controls.Add(this.postAsLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -185,11 +181,71 @@
             this.readAsLabel.TabIndex = 0;
             this.readAsLabel.Text = "Read As";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.everythingEvents);
+            this.groupBox3.Controls.Add(this.repartitionByUser);
+            this.groupBox3.Location = new System.Drawing.Point(12, 411);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(487, 352);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Repartition";
+            // 
+            // everythingEvents
+            // 
+            this.everythingEvents.Location = new System.Drawing.Point(15, 61);
+            this.everythingEvents.Multiline = true;
+            this.everythingEvents.Name = "everythingEvents";
+            this.everythingEvents.Size = new System.Drawing.Size(459, 276);
+            this.everythingEvents.TabIndex = 5;
+            // 
+            // repartitionByUser
+            // 
+            this.repartitionByUser.Location = new System.Drawing.Point(15, 32);
+            this.repartitionByUser.Name = "repartitionByUser";
+            this.repartitionByUser.Size = new System.Drawing.Size(221, 23);
+            this.repartitionByUser.TabIndex = 7;
+            this.repartitionByUser.Text = "Repartition by user";
+            this.repartitionByUser.UseVisualStyleBackColor = true;
+            this.repartitionByUser.Click += new System.EventHandler(this.repartitionByUser_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.heavyPosters);
+            this.groupBox4.Controls.Add(this.emitWhenConditionDetected);
+            this.groupBox4.Location = new System.Drawing.Point(525, 411);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(569, 352);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Emit";
+            // 
+            // emitWhenConditionDetected
+            // 
+            this.emitWhenConditionDetected.Location = new System.Drawing.Point(25, 19);
+            this.emitWhenConditionDetected.Name = "emitWhenConditionDetected";
+            this.emitWhenConditionDetected.Size = new System.Drawing.Size(526, 23);
+            this.emitWhenConditionDetected.TabIndex = 8;
+            this.emitWhenConditionDetected.Text = "Emit event when condition detected";
+            this.emitWhenConditionDetected.UseVisualStyleBackColor = true;
+            this.emitWhenConditionDetected.Click += new System.EventHandler(this.emitWhenConditionDetected_Click);
+            // 
+            // heavyPosters
+            // 
+            this.heavyPosters.Location = new System.Drawing.Point(25, 61);
+            this.heavyPosters.Multiline = true;
+            this.heavyPosters.Name = "heavyPosters";
+            this.heavyPosters.Size = new System.Drawing.Size(526, 276);
+            this.heavyPosters.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 407);
+            this.ClientSize = new System.Drawing.Size(1106, 775);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
@@ -198,6 +254,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,7 +268,6 @@
         private System.Windows.Forms.Button stopPostingActivitiesButton;
         private System.Windows.Forms.TextBox postAs;
         private System.Windows.Forms.Label postAsLabel;
-        private System.Windows.Forms.CheckBox mentionsEnabled;
         private System.Windows.Forms.TextBox activities;
         private System.Windows.Forms.Label activitiesLable;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -218,6 +277,12 @@
         private System.Windows.Forms.TextBox events;
         private System.Windows.Forms.TextBox readAs;
         private System.Windows.Forms.Label readAsLabel;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button repartitionByUser;
+        private System.Windows.Forms.TextBox everythingEvents;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button emitWhenConditionDetected;
+        private System.Windows.Forms.TextBox heavyPosters;
     }
 }
 

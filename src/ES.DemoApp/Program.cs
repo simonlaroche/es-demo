@@ -18,7 +18,7 @@ namespace ES.DemoApp
         static void Main()
         {
             //Start the event store!
-            var processInfo = new ProcessStartInfo(@"..\..\lib\EventStore-NET-v3.0.0rc2\EventStore.SingleNode.exe", "--run-projections=all");
+            var processInfo = new ProcessStartInfo(@"..\..\lib\EventStore-NET-v3.0.0rc2\EventStore.SingleNode.exe", "--run-projections=ALL");
             
             _process = new Process();
           
